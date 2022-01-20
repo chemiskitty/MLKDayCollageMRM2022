@@ -1,0 +1,90 @@
+body {
+    background: #000;
+    color:  #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:  300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight:  700;
+    margin: 1em 0;
+}
+h1,
+h2 {
+    font-style:  italic;
+}
+
+footer {
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    margin-top: 3em;
+}
+
+.Grid {
+    background-image: url('images/prideflag.jpg');
+    background-position: center center;
+    background-size:  cover;
+    column-gap: 0px;
+    display: grid;
+    float: left;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.Grid img{
+    height: auto;
+    opacity: 50%;
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+}
+
+.tile {
+    position: relative;
+}
+
+.tile-hover {
+    background: #fff;
+    color:  #000;
+    display: none;
+    height: auto;
+    left: -50%;
+    opacity: 0;
+    padding: 1em;
+    position: absolute;
+    top: 100%;
+    transition: opacity 0.5s ease-in-out;
+    width:  50vw;
+    z-index: 10;
+}
+
+@media screen and (min-width: 992px) {
+    .tile-hover {
+        width: 20vw;
+    }
+}
+
+.tile:hover {
+    cursor: help;
+}
+
+.tile:hover .tile-hover {
+    display: inline-block;
+    opacity: 1;
+}
+
+.tile:hover img {
+    opacity: 100%;
+}
+
+.tile-hover h2,
+.tile-hover h3 {
+    margin-top:  0;
+}
+
+.tile-hover h2 {
+    margin-bottom:  0;
+}
